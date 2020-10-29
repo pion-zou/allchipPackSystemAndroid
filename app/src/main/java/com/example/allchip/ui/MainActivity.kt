@@ -124,7 +124,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("ShowToast")
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         if (event?.keyCode == KeyEvent.KEYCODE_BACK) {
-            if (findNavController(R.id.nav_host_fragment).navigateUp()) {
+            if (findNavController(R.id.nav_host_fragment).currentBackStackEntry != null) {
                 return onSupportNavigateUp()
             }
             return if (System.currentTimeMillis() - mBackKeyDownTime < BACK_KEY_DOWN_TIMEOUT) {
