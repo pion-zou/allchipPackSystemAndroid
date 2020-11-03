@@ -121,7 +121,7 @@ class PackageFragment: Fragment() {
                         }
                     }
                     //装包时间
-                    val format = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss" , Locale.getDefault())
+                    val format = SimpleDateFormat("yyyy-MM-dd HH:mm:ss" , Locale.getDefault())
                     val date: Date = Date(System.currentTimeMillis())
                     good.package_time = format.format(date)
                     listGoods.add(good)
